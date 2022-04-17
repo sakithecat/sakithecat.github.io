@@ -13,4 +13,10 @@ html{
     background-color: #111;
     color: #ddd;
     font-family: "Courier New", monospace;
+
+    text-align: center;
+}
+
+h1{
+    font-size: 72px;
 }
