@@ -6,7 +6,7 @@
 }
 
 .shadow {
-    box-shadow: 7px 7px purple;
+    box-shadow: 7px 7px #ff1271;
 }
 
 .img100{
@@ -20,6 +20,11 @@ html{
     font-family: "Courier New", monospace;
 
     text-align: center;
+}
+
+.invisible_link{
+    color: #ddd;
+    
 }
 
 h1{
