@@ -7,7 +7,7 @@ Vue.createApp({
           ['The Cat', "/img/microbe_wanted.jpg"],
           ['The Adventurer', "/img/outdoorkitty.jpg"],
           ['The Cyclist', "/img/saki_biker.jpg"],
-          ['The Test Pilot', "/img/saki_boxtime.png"],
+          ['The Microbe', "/img/saki_boxtime.png"],
           ['The Elf', "/img/micheal_microbe.jpg"],
           ['The Cheesepuff Lover', "/img/microbe_cheesepuff2.jpg"],
           ['The Stylish', "/img/sweaterkitty.jpg"],
