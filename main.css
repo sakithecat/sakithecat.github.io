@@ -9,6 +9,11 @@
     box-shadow: 7px 7px purple;
 }
 
+.img100{
+    width: 70px;
+    padding: 20px;
+}
+
 html{
     background-color: #111;
     color: #ddd;
