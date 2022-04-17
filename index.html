@@ -7,9 +7,9 @@
 </head>
 <body>
     <div id="app">
-        <h1>SAKI:</h1>
-        <p>{{ titles[index] }}</p>
-        <img class = "square" src = "/img/microbe_cheesepuff2.jpg" alt = "microbe w cheese">
+        <h1>SAKI</h1>
+        <p>Saki {{ title_image[index][0] }}</p>
+        <img class = 'square' :src = "title_image[index][1]" >
     </div>
 </body>
 
