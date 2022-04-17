@@ -24,9 +24,15 @@ html{
 
 .invisible_link{
     color: #ddd;
-    
+    text-decoration: none;
 }
 
 h1{
     font-size: 72px;
+}
+
+.middle_of_the_page{
+    position: fixed;
+    top: 30%;
+    right: 30%;
 }
