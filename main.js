@@ -20,11 +20,9 @@ Vue.createApp({
     methods: {
         increment_index_forever(){
             
+            this.index++
             if (this.index >= this.title_image.length){
                 this.index = 0
-            }
-            else{
-                this.index++
             }
         }
     },
