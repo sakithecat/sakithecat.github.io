@@ -2,21 +2,22 @@
 <head>
 <link rel = "stylesheet" href = "main.css"> 
     <script src="https://unpkg.com/vue@3"></script>
-    <title>Saki The Cat</title>
+    <title>{{cat_names[name_index]}} The Cat</title>
     
 </head>
 <body>
     <div id="app">
-        <h1><a href="hidden.html" class="invisible_link">SAKI</a></h1>
-        <p>Saki The Cat, <a class="invisible_link" href="https://youtu.be/ftSUchAdVTE?t=121">please say The Cat</a></p>
-        <p>Saki {{ title_image[index][0] }}</p>
+        <h1 @click="change_cat_name">{{cat_names[name_index]}}</h1>
+        <p>{{cat_names[name_index]}} The Cat, <a class="invisible_link" href="https://youtu.be/ftSUchAdVTE?t=121">please say The Cat</a></p>
+        <p>{{cat_names[name_index]}} {{ title_image[index][0] }}</p>
         <img class = 'square shadow' :src = "title_image[index][1]" >
         <br><br>
-        <p>Friends:</p>
-        
-        <a  href="https://menchine.com"><img class="img100" src="/img/friends/cone.png"></a>
-        <a href="https://zewski.net"><img class="img100" src="/img/friends/zewski.png"></a>
-        <a  href="https://mjustin.net"><img class="img100" src="/img/friends/michael.png"></a>
+        <div id="friends">
+            <p>Friends:</p>
+            <a  href="https://menchine.com"><img class="img100" src="/img/friends/cone.png"></a>
+            <a href="https://zewski.net"><img class="img100" src="/img/friends/zewski.png"></a>
+            <a  href="https://mjustin.net"><img class="img100" src="/img/friends/michael.png"></a>
+        </div>
     </div>
 </body>
 
