@@ -1,13 +1,16 @@
 .square {
     width: auto;
     height: 400px;
+    width: 400px;
     object-fit: cover;
 }
 
-.p {
-    font-family: "Courier New", monospace;
+.shadow {
+    box-shadow: 7px 7px purple;
 }
 
-.shadow {
-    box-shadow: 10px 10px purple;
+html{
+    background-color: #111;
+    color: #ddd;
+    font-family: "Courier New", monospace;
 }
