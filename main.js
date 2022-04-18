@@ -18,10 +18,12 @@ Vue.createApp({
             "Saki",
             "Microbe",
             "Micro-Chat",
-            "Dingle",
+            "Kitty",
+            "Baby-cat",
+            "Linty",
+            "Antimicrobial Coating",
             "Orla",
-            "Who Names A Cat Orla??",
-            "Kitty"
+            "Microfiber Cloth"
         ],
         alt_name: "Microbe",
         index: 0,
