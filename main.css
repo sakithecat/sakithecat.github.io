@@ -36,3 +36,7 @@ h1{
     top: 30%;
     right: 30%;
 }
+.halfpage{
+    float:left;
+    display:inline;width: 49%;
+}
