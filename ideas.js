@@ -45,7 +45,7 @@ known_saki_ideas = [
     "Identify and attempt to eat a bug",
     "Sploot",
     "Decide that a bug is actually a lint",
-    "Steal Ino's food",
+    // "Steal Ino's food",
     "Lick mode! (or Bite mode?)",
     // "Create an alphabet based on all possible ideas",
     "Spend a while making cool shapes out of lines",
