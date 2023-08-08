@@ -45,7 +45,6 @@ known_saki_ideas = [
     "Identify and attempt to eat a bug",
     "Sploot",
     "Decide that a bug is actually a lint",
-    "Point eyeballs in different directions",
     "Steal Ino's food",
     "Lick mode! (or Bite mode?)",
     // "Create an alphabet based on all possible ideas",
@@ -57,6 +56,8 @@ known_saki_ideas = [
     "Squeeze head out of window crack (and get stuck)",
     "Become vacuum cleaner (deposit lint on next person to pick Saki up)",
     "Eat trash can snack",
+    "Outdoor Adventure (brief)",
+    ["Point eyeballs in different directions", 0b10010],
     ["Steal fish food", 0b1110],
     ["Jump inside cardboard box", 0b110010],
     ["4x4 mode", 0b001100],
@@ -124,7 +125,9 @@ function drawIdea(ctx, edges, n_brain_cells=4){
         [0,3],
         [1,2],
         [1,3],
-        [2,3]
+        [2,3],
+        // [0,4],
+        // [3,5],
     ]
     vertices.forEach((v, i)=>{
         if (edges & (1<<i)){
