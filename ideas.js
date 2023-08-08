@@ -1,4 +1,8 @@
+/*
+This is very low quality. I don't care.
+*/
 
+// poached from stackoverflow.
 function createHiPPICanvas(width, height) {
     const ratio = 2* window.devicePixelRatio;
     const canvas = document.createElement("canvas");
@@ -12,6 +16,7 @@ function createHiPPICanvas(width, height) {
     return canvas;
 }
 
+// globals mixed with variable declaration. Example antipattern. Saki isn't very good at writing disciplined code on her own time.
 var SIZE=500
 var RADIUS = SIZE/10
 var canvas = createHiPPICanvas(SIZE,SIZE)
@@ -22,7 +27,6 @@ document.body.appendChild(canvas);
 
 context.strokeStyle = "white";
 context.fillStyle = "white";
-
 context.textAlign = 'center';
 
 var button = document.createElement("button");
@@ -32,6 +36,46 @@ button.classList.add("butt")
 button.classList.add("shadow")
 var textbox = document.createElement("h2");
 textbox.innerHTML = "<br>"
+
+
+known_saki_ideas = [
+    "Play the piano",
+    "Consider having illegal ideas",
+    "Make a program that simulates Saki's ideas",
+    "Identify and attempt to eat a bug",
+    "Sploot",
+    "Decide that a bug is actually a lint",
+    "Point eyeballs in different directions",
+    "Steal Ino's food",
+    "Lick mode! (or Bite mode?)",
+    // "Create an alphabet based on all possible ideas",
+    "Spend a while making cool shapes out of lines",
+    "Make an instagram post",
+    "Pry blanket off of Estelle if she sleeps in past 7:00 AM",
+    "Lament about height of tall furniture",
+    "Tear open leftover burrito. (Don't worry about the tin foil)",
+    "Squeeze head out of window crack (and get stuck)",
+    "Become vacuum cleaner (deposit lint on next person to pick Saki up)",
+    "Eat trash can snack",
+    ["Steal fish food", 0b1110],
+    ["Jump inside cardboard box", 0b110010],
+    ["4x4 mode", 0b001100],
+    ["Try very hard to have two ideas at the same time", 0b10010],
+    ["The most advanded idea possible ... (It's unknown if Saki has yet acheived this thought)", 0b111111]
+    
+]
+
+illegal_ideas = [0]
+function load_illegal_ideas(){
+    known_saki_ideas.forEach((idea)=>{
+        if (idea.constructor == Array){
+            illegal_ideas.push(idea[1])
+        }
+    })
+
+}
+load_illegal_ideas()
+
 function drawLine(ctx,x1,y1,x2,y2){
     ctx.beginPath()
     ctx.moveTo(x1,y1)
@@ -49,8 +93,6 @@ function clear(ctx=context){
 }
 
 function drawIdea(ctx, edges, n_brain_cells=4){
-    // ctx.lineWidth = 10;
-
     function indexToPos(index){
         padded_radius = RADIUS * 1.1
         return [padded_radius + Boolean(index & 1) * (SIZE- 2*padded_radius), padded_radius + Boolean(index & 2) * (SIZE- 2*padded_radius),]
@@ -63,7 +105,19 @@ function drawIdea(ctx, edges, n_brain_cells=4){
         ctx.stroke(); 
         
     }
-    //draw lines
+    /*
+         1
+     _________
+    |\      /|
+   2| \3  4/ |5
+    |  \  /  |
+    |   \/   |
+    |   /\   |
+    |  /  \  |
+    | /    \ |
+    |/   6  \|
+    ----------
+    */
     var vertices=[
         [0,1],
         [0,2],
@@ -81,44 +135,6 @@ function drawIdea(ctx, edges, n_brain_cells=4){
     })
 }
 
-known_saki_ideas = [
-    "play the piano",
-    "consider having illegal ideas",
-    "make a program that simulates saki's ideas",
-    "identify and eat a bug",
-    "sploot",
-    "decide that a bug is actually a lint",
-    "point eyeballs in different directions",
-    "Steal Ino's food",
-    "Lick mode! (or Bite mode?)",
-    "Create an alphabet based on all possible ideas",
-    "Spend a while making cool shapes out of lines",
-    "Make an instagram post",
-    "Pry blanket off of Estelle if she sleeps in past 7:00 AM",
-    "Lament about height of tall furniture",
-    "Tear open leftover burrito. (Don't worry about the tin foil)",
-    "Squeeze head out of window crack (and get stuck)",
-    "Become vacuum cleaner (deposit lint on next person to pick saki up)",
-    "Eat trash can snack",
-    ["Steal fish food", 0b1110],
-    ["Jump inside cardboard box", 0b110010],
-    ["4x4 mode", 0b001100],
-    ["Try very hard to have two ideas at the same time", 0b10010],
-    ["The most advanded idea possible ... (It's unknown if Saki has yet acheived this thought)", 0b111111]
-    
-]
-
-
-illegal_ideas = [0]
-function load_illegal_ideas(){
-    known_saki_ideas.forEach((idea)=>{
-        if (idea.constructor == Array){
-            illegal_ideas.push(idea[1])
-        }
-    })
-
-}
-load_illegal_ideas()
 function random_idea(){
     var idea_index = Math.floor(Math.random()*known_saki_ideas.length)
     var idea = known_saki_ideas[idea_index];
@@ -142,9 +158,7 @@ function random_idea(){
         "shape": idea_shape
     }
 }
-// drawIdea(context, 0)
-intro()
-// start()
+
 function newIdea(){
     clear()
     var idea = random_idea()
@@ -162,7 +176,7 @@ function start(){
     document.body.appendChild(button)
 }
 function intro(){
-    // document.getElementById("idea_button").style.display = 'none';
+    // The lowest-quality snippet in this whole file.
     clear()
     setTimeout(()=>{
         drawText(context, "Saki's", SIZE/2, SIZE*.2, SIZE/5)
@@ -202,3 +216,5 @@ function intro(){
     },1000)
 }
 
+intro()
+// start() //Skip intro. For development.
