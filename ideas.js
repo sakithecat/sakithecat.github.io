@@ -130,8 +130,8 @@ function random_idea(){
     }
 }
 // drawIdea(context, 0)
-// intro()
-start()
+intro()
+// start()
 function newIdea(){
     clear()
     var idea = random_idea()
