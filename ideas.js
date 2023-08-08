@@ -32,8 +32,8 @@ function drawLine(ctx,x1,y1,x2,y2){
     ctx.stroke()
 }
 
-function drawText(ctx, text, x, y, size=30){
-    context.font = size + 'px sans-serif';
+function drawText(ctx, text, x, y, size=20){
+    context.font = size + 'px monospace';
     ctx.fillText(text, x, y);
 }
 
@@ -155,29 +155,29 @@ function intro(){
     // document.getElementById("idea_button").style.display = 'none';
     clear()
     setTimeout(()=>{
-        drawText(context, "Saki's", SIZE/2, SIZE*.2, 150)
+        drawText(context, "Saki's", SIZE/2, SIZE*.2, 130)
         setTimeout(()=>{
-            drawText(context, "Idea", SIZE/2, SIZE*.5, 150)
+            drawText(context, "Idea", SIZE/2, SIZE*.5, 130)
             setTimeout(()=>{
-                drawText(context, "Generator.", SIZE/2, SIZE*.8, 150)
+                drawText(context, "Generator.", SIZE/2, SIZE*.8, 130)
                 setTimeout(()=>{
                     clear()
-                    drawText(context, "Saki only has 4 brain cells...", SIZE/2, SIZE/2, 50)
+                    drawText(context, "Saki only has 4 brain cells...", SIZE/2, SIZE/2, 30)
                     setTimeout(()=>{
                         clear()
-                        drawText(context, "Saki only has 4 brain cells...", SIZE/2, SIZE/2, 50)
+                        drawText(context, "Saki only has 4 brain cells...", SIZE/2, SIZE/2, 30)
                         drawIdea(context,0,1)
                         setTimeout(()=>{
                             clear()
-                            drawText(context, "Saki only has 4 brain cells...", SIZE/2, SIZE/2, 50)
+                            drawText(context, "Saki only has 4 brain cells...", SIZE/2, SIZE/2, 30)
                             drawIdea(context,0,2)
                             setTimeout(()=>{
                                 clear()
-                                drawText(context, "Saki only has 4 brain cells...", SIZE/2, SIZE/2, 50)
+                                drawText(context, "Saki only has 4 brain cells...", SIZE/2, SIZE/2, 30)
                                 drawIdea(context,0,3)
                                 setTimeout(()=>{
                                     clear()
-                                    drawText(context, "Saki only has 4 brain cells...", SIZE/2, SIZE/2, 50)
+                                    drawText(context, "Saki only has 4 brain cells...", SIZE/2, SIZE/2, 30)
                                     drawIdea(context,0,4)
                                     setTimeout(()=>{
                                         start()
